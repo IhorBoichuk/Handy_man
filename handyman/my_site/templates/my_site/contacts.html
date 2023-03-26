@@ -1,0 +1,23 @@
+{% extends 'my_site/base.html' %}
+
+
+{% block cont %}
+    <form method='post' class="contacts__form">{% csrf_token %}
+        <div class="contacts__form-title">CONTACT US</div>
+        <div class="contacts__form-subtitle"><span>&#42;</span> Please fill this form</div>
+
+        <div class="form__item">
+            {{form.name}}
+        </div>
+        <div class="form__item">
+            {{form.phone}}
+        </div>
+        <div class="form__item">
+            {{form.message}}
+        </div>
+        <div class="form__item">
+            <button type="submit" class="form__button">Send Message</button>
+        </div>
+    </form>
+        
+{% endblock cont %}
